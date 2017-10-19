@@ -1,6 +1,6 @@
 {
-  "name": "vue-toast",
-  "version": "0.0.1",
+  "name": "vue-toast5",
+  "version": "0.0.2",
   "description": "a vue toast component",
   "main": "dist/vue-toast.js",
   "scripts": {

@@ -3,9 +3,9 @@
 ### Install
 
 ```bash
-npm install vue-toast -S
+npm install vue-toast5 -S
 
-yarn add vue-toast
+yarn add vue-toast5
 ```
 
 ### QuickStart
