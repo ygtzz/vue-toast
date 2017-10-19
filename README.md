@@ -1,4 +1,5 @@
 ## vue-toast
+a modified version from vue-easytoast
 
 ### Install
 
