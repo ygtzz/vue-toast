@@ -136,7 +136,7 @@
     parent: 'body',
     transition: 'fade',
     duration: 2000,
-    mode:'override',
+    mode:'',
     msg: '',
     callback:''
   }
