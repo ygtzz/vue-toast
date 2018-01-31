@@ -1,5 +1,4 @@
 <template>
-  <!--<div>-->
     <transition :name="mergedOption.transition">
       <div
       :id="mergedOption.id"
@@ -8,10 +7,9 @@
       :transition="mergedOption.transition"
       v-show="showing"
       >
-      <span class="et-content" v-html="mergedOption.msg"></span>
+        <span class="et-content" v-html="mergedOption.msg"></span>
       </div>
     </transition>
-  <!--</div>-->
 </template>
 <style>
   .et-wrapper {
@@ -31,16 +29,12 @@
     padding: 20px 30px;
   }
   .et-wrapper.et-left {
-      right: auto;
-      left: 0;
+      text-align: left;
   }
   .et-wrapper.et-right {
-      left: auto;
-      right: 0;
+      text-align: right;
   }
   .et-wrapper.et-center {
-      /*left: 50%;
-      transform: translateX(-50%);*/
       text-align:center;
   }
   .et-wrapper.et-top {
@@ -142,6 +136,7 @@
     parent: 'body',
     transition: 'fade',
     duration: 2000,
+    mode:'override',
     msg: '',
     callback:''
   }
@@ -172,7 +167,6 @@
             if(typeof className === 'string'){
                 clazz.push(className)
             }
-
             if(Array.isArray(className)){
                 clazz = clazz.concat(className)
             }
@@ -189,7 +183,6 @@
                 clazz.push(`et-${verticalPosition}`)
             }
         }
-
         return clazz.join(' ')
       }
     },
@@ -201,7 +194,6 @@
         }
         this.showing = true
         this.option = this.queue[0]
-
         if ((!this.option.mode || this.option.mode === 'override') && pending > 1) {
           clearTimeout(this.timeoutId)
           this.showing = false
@@ -212,7 +204,7 @@
             this.showing = false
             this.timeoutId = null
             setTimeout(() => this.queue.shift())
-          }, this.mergedOption.duration * pending)
+          }, this.mergedOption.duration)
         }
       },
       showing:function(val){
