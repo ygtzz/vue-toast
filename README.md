@@ -34,13 +34,22 @@ Vue.toast('toast-回调函数',function(){
 
 ### Params
 
-- `id`: the toast's id
-- `msg`: the message showed in toast
-- `duration`: how long time the toast show,default is 2000,unit is milliscond
-- `callback`: the callback function after toast hide
-- `className`: a custom class for toast
-- `parent`: the parent element to insert toast element,default is body
-- `transition`: toast popup transition effect,default is fade,other option is slide
+Parameter | Type |Default| Description
+--------- | ---- | ------|-----------
+id | `string` |  | the toast's id
+msg | `string` |  | the message showed in toast
+callback | `function` |  | the callback function after toast hide
+parent | `string`| `body` | the parent element to insert toast element
+className | `string`, `array` | | a custom class for toast
+horizontalPosition | `string` | `center` | Position horizontal of toast. There are 3 pre-defined positions: `center`,`left`,`right`
+verticalPosition | `string` | `middle` | Position vertical of toast. There are 3 pre-defined positions: `middle`,`top`,`bottom`
+duration | `number` | 2000 | how long time the toast show,unit is milliscond
+mode | `string` | `override` | `override` or `queue`. If `override`, the last toast will forcibly flush previous
+transition | `string` | `fade` | Built-in transitions: `fade`, `slide-[up/down/left/right]`. See also [Transitions](http://v1.vuejs.org/guide/transitions.html)
+
+### methods
+
+- `Vue.clearToast([id])`：remove all toast or special toast by id
 
 ### Preview
 

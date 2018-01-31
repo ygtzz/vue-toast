@@ -34,14 +34,11 @@ export default {
 			let vm = toast.$mount()
 			document.querySelector(options.parent || 'body').appendChild(vm.$el)
 		}
-		// console.log(options);
 		options = assign({},EasyToastVue.DEFAULT_OPT,options);
-		// console.log(options);
 		toast.queue.push(options)
 	}
 	Vue.toast = Vue.prototype.$toast = toast;
 	Vue.clearToast = Vue.prototype.$clearToast = function(id){
-		//queue待处理
 		if(id){
 			removeChild(id);
 		}
