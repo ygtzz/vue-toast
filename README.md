@@ -11,13 +11,13 @@ yarn add vue-toast5
 
 ### QuickStart
 ```javascript
-require('vue-toast/dist/vue-toast.css');
+require('vue-toast5/dist/vue-toast.css');
 
 // in ES6 modules
-import toast from 'vue-toast';
+import toast from 'vue-toast5';
 
 // in CommonJS
-const toast = require('vue-toast');
+const toast = require('vue-toast5');
 
 // in Global variable
 const toast = VueToast.default;
